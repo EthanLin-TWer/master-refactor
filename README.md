@@ -4,5 +4,5 @@
 
 再版序中，大🐻已经表达得很清晰，学习重构，抓 **坏味道**、**对应的重构手法**、**遵循特定步骤**。是学习线索。当熟读此书。
 
-[Badges: Travis CI]: https://travis-ci.org/linesh-simplicity/Refactor-deliberate-practice.svg?branch=master
-[Links: Travis CI]: https://travis-ci.org/linesh-simplicity/Refactor-and-deliberate-practice
+[Badges: Travis CI]: https://travis-ci.org/linesh-simplicity/master-refactor.svg?branch=master
+[Links: Travis CI]: https://travis-ci.org/linesh-simplicity/master-refactor

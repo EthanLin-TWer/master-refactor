@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'Refactor-deliberate-practice'
+rootProject.name = 'master-refactor'
