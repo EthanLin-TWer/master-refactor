@@ -21,9 +21,8 @@ repositories {
 dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.21'
 
-    testImplementation('org.junit.jupiter:junit-jupiter-api:5.0.0-M3')
-    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.0.0-M3')
-
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.0-M3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.0.0-M3'
     testImplementation 'org.mockito:mockito-core:2.1.0-RC.1'
 }
 
