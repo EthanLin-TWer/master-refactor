@@ -2,14 +2,14 @@ buildscript {
     repositories { mavenCentral() }
     dependencies {
         classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3'
-    } 
+    }
 }
 
 plugins {
     id 'net.saliman.cobertura' version '2.4.0'
 }
 
-apply plugin: 'java'
+apply plugin: 'java-library'
 apply plugin: 'idea'
 apply plugin: 'checkstyle'
 apply plugin: 'org.junit.platform.gradle.plugin'
@@ -19,12 +19,12 @@ repositories {
 }
 
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.21'
+    implementation 'org.slf4j:slf4j-api:1.7.21'
 
-    testCompile('org.junit.jupiter:junit-jupiter-api:5.0.0-M3')
-    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.0-M3')
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.0.0-M3')
+    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.0.0-M3')
 
-    testCompile 'org.mockito:mockito-core:2.1.0-RC.1'
+    testImplementation 'org.mockito:mockito-core:2.1.0-RC.1'
 }
 
 idea.project {
@@ -39,18 +39,18 @@ checkstyle {
 }
 
 junitPlatform {
-    enableStandardTestTask = true 
+    enableStandardTestTask = true
 }
 
 cobertura {
     coverageIgnoreTrivial = true
-    coverageCheckHaltOnFailure = true 
+    coverageCheckHaltOnFailure = true
     coverageCheckLineRate = 90
     coverageCheckBranchRate = 90
-    // TODO: [Linesh][1/7/17] Right now JUnit 5 runs test in junitPlatformTest task which is not scanned by cobertura and therefore nothing is coverage-checked.  
+    // TODO: [Linesh][1/7/17] Right now JUnit 5 runs test in junitPlatformTest task which is not scanned by cobertura and therefore nothing is coverage-checked.
     coverageExcludes = [
-        '.*tdd.howto.linesh.tw.fizzbuzzwhizz.*',
-        '.*tdd.howto.linesh.tw.multicurrencymoney.*'
+            '.*tdd.howto.linesh.tw.fizzbuzzwhizz.*',
+            '.*tdd.howto.linesh.tw.multicurrencymoney.*'
     ]
 }
 
