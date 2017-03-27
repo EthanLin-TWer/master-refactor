@@ -9,18 +9,21 @@ public class Player {
     }
 
     public Position move(String towards) {
-        if (towards.equals("left")) {
-            this.position.x -= 1;
+        switch (towards) {
+            case "left":
+                this.position.x -= 1;
+                break;
+            case "right":
+                this.position.x += 1;
+                break;
+            case "forward":
+                this.position.y += 1;
+                break;
+            case "backward":
+                this.position.y -= 1;
+                break;
         }
-        if (towards.equals("right")) {
-            this.position.x += 1;
-        }
-        if (towards.equals("forward")) {
-            this.position.y += 1;
-        }
-        if (towards.equals("backward")) {
-            this.position.y -= 1;
-        }
+
         return this.position;
     }
 }
