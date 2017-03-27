@@ -4,7 +4,9 @@ jdk:
 install:
   - ./gradlew assemble --no-daemon
 script:
-  - ./gradlew clean check junitPlatformTest coberturaCheck test --no-daemon
+  - ./gradlew clean check junitPlatformTest --no-daemon
+# From what I know, cobertura doesn't work for JUnit atm. Will open up this once fixed
+  - ./gradlew clean coberturaCheck --no-daemon
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
