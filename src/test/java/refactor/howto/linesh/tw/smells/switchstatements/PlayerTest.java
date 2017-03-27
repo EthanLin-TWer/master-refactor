@@ -11,8 +11,8 @@ class PlayerTest {
 
         Position position = player.move("left");
         assertAll("player position",
-                () -> assertEquals(0, position.x),
-                () -> assertEquals(1, position.y)
+                () -> assertEquals(0, position.getX()),
+                () -> assertEquals(1, position.getY())
         );
     }
 
@@ -22,8 +22,8 @@ class PlayerTest {
 
         Position position = player.move("right");
         assertAll("player position",
-                () -> assertEquals(2, position.x),
-                () -> assertEquals(1, position.y)
+                () -> assertEquals(2, position.getX()),
+                () -> assertEquals(1, position.getY())
         );
     }
 
@@ -33,8 +33,8 @@ class PlayerTest {
 
         Position position = player.move("forward");
         assertAll("player position",
-                () -> assertEquals(1, position.x),
-                () -> assertEquals(2, position.y)
+                () -> assertEquals(1, position.getX()),
+                () -> assertEquals(2, position.getY())
         );
     }
 
@@ -44,8 +44,8 @@ class PlayerTest {
 
         Position position = player.move("backward");
         assertAll("player position",
-                () -> assertEquals(1, position.x),
-                () -> assertEquals(0, position.y)
+                () -> assertEquals(1, position.getX()),
+                () -> assertEquals(0, position.getY())
         );
 
     }

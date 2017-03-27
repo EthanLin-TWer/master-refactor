@@ -11,19 +11,15 @@ public class Player {
     public Position move(String towards) {
         switch (towards) {
             case "left":
-                this.position.x -= 1;
-                break;
+                return this.position.setX(this.position.getX() - 1);
             case "right":
-                this.position.x += 1;
-                break;
+                return this.position.setX(this.position.getX() + 1);
             case "forward":
-                this.position.y += 1;
-                break;
+                return this.position.setY(this.position.getY() + 1);
             case "backward":
-                this.position.y -= 1;
-                break;
+                return this.position.setY(this.position.getY() - 1);
+            default:
+                return this.position;
         }
-
-        return this.position;
     }
 }
